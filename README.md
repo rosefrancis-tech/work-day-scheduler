@@ -55,5 +55,5 @@ The repository link:
 Deployed Application url: [https://rosefrancis-tech.github.io/work-day-scheduler/](https://rosefrancis-tech.github.io/work-day-scheduler/)
 
 ## Acknowledgement
-1. [Moment.js](hhttps://momentjs.com/ "momentjs.com")
+1. [Moment.js](https://momentjs.com/ "momentjs.com")
 
