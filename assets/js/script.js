@@ -5,7 +5,6 @@ var hourOfTheDay = currentTime.format("ha");
 // display today's date in header
 $(".currentDay").text(currentTime.format("dddd, MMMM Do"));
 
-
 var index = 0;
 // style time-blocks according to the present, past and future times
 $(".row").find($(".hour")).each(function() {
@@ -29,19 +28,24 @@ $(".row").find($(".hour")).each(function() {
     }
 })
 
-
 // edit events
 $(".description").on("click", function(){
     // get current text 
     var text = $(this)
     .text()
     .trim();
-
+    // get current class
     var curClass = $(this)
     .attr("class");
 
-    // replace p element with a new textarea
+    // replace colomn element with a new textarea
     var textInput = $("<textarea>").addClass(curClass).val(text);
     $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+    });
+
+
 
 })
