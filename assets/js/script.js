@@ -31,3 +31,17 @@ $(".row").find($(".hour")).each(function() {
 
 
 // edit events
+$(".description").on("click", function(){
+    // get current text 
+    var text = $(this)
+    .text()
+    .trim();
+
+    var curClass = $(this)
+    .attr("class");
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass(curClass).val(text);
+    $(this).replaceWith(textInput);
+
+})
