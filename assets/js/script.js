@@ -100,6 +100,12 @@ $(".container").on("click", "i", function(){
     saveTasks();
 })
 
+// function for clicking clear all icon
+$(".clear-all").on("click", function(){
+    localStorage.clear();
+    location.reload();
+})
+
 // function for saving to local storage
 var saveTasks = function() {  
     localStorage.setItem("events", JSON.stringify(events));
