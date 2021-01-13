@@ -74,8 +74,8 @@ $(".description").on("blur","textarea", function() {
         timeBlock: currentTimeBlock,
         textBlock: texts
     } 
-    // recreate the p element
-    var textDisplay = $("<p>").addClass("text-block").text(texts);
+    // recreate the p element, show as not saved
+    var textDisplay = $("<p>").addClass("text-block not-saved").text(texts);
     $(this).replaceWith(textDisplay);
 })
 
@@ -97,6 +97,7 @@ $(".container").on("click", "i", function(){
     else {
         events.push(eventObj);     
     }
+    $(this).closest(".saveBtn").prev(".description").children(".text-block").removeClass("not-saved");
     saveTasks();
 })
 

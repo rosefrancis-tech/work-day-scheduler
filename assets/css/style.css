@@ -4,26 +4,6 @@ body {
   line-height: 1;
 }
 
-.utility {
-  text-align: center;
-  position: sticky;
-  bottom:0; 
-  width:100%;
-  background-color: white;;
-}
-
-.clear-all {
-  font-size: large;
-  border-style: double;
-  background-color: crimson;
-  color: white;
-  padding: 0;
-  width: 3%;
-  margin:auto;
-  opacity: 0.75;
-  
-}
-
 textarea{
   background: transparent;
   border: none;
@@ -41,15 +21,23 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-  margin-bottom: 0;
-  
-}
-
 .time-block{
   text-align: center;
   border-radius: 15px;
+}
+
+.description{
+  white-space: pre-wrap;
+  margin-bottom: 0;
+}
+
+.text-block {
+  width: 100%;
+  height: 70%;
+}
+
+.not-saved {
+  background-color: cyan;
 }
 
 .row {
@@ -97,11 +85,7 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.text-block {
-  width: 100%;
-  height: 70%;
- 
-}
+
 
 .icon {
   margin: auto;
@@ -109,4 +93,22 @@ textarea{
   white-space: nowrap;
 }
 
+.utility {
+  text-align: center;
+  position: sticky;
+  bottom:0; 
+  width:100%;
+  background-color: white;;
+}
+
+.clear-all {
+  font-size: large;
+  border-style: double;
+  background-color: crimson;
+  color: white;
+  padding: 0;
+  width: 3%;
+  margin:auto;
+  opacity: 0.75;
+}
 
