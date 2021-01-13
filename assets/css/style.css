@@ -37,7 +37,7 @@ textarea{
 }
 
 .not-saved {
-  background-color: cyan;
+  border-style: dotted;
 }
 
 .row {
