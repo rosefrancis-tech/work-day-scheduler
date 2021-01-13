@@ -11,24 +11,7 @@ var eventObj = {};
 // display today's date in header
 $(".currentDay").text(currentTime.format("dddd, MMMM Do"));
 
-var loadEvents = function() {
-    currentEvents = JSON.parse(localStorage.getItem("events"));
-    
-    // if nothing in localStorage, create a new object to track all task status arrays
-    /*
-    if (currentEvents != null ) {
-        for(var j=0; j < currentEvents.length; j++){
-            // if local storage has values for same timeblock, then remove it
-            if(currentEvents[j].timeBlock === eventObj.timeBlock) {
-                currentEvents.splice(j,1);
-                var textDisplay = $("<p>").text(texts);
-                //$(this).replaceWith(textDisplay);
-        }
-        
-    }
-    */
-};
-
+// INITIAL LOAD events and appropriate color coding
 var index1 = 0;
 // style time-blocks according to the present, past and future times
 $(".row").find($(".hour")).each(function() {
@@ -53,16 +36,10 @@ $(".row").find($(".hour")).each(function() {
 
     currentEvents = JSON.parse(localStorage.getItem("events"));
     $.each(currentEvents, function(index,value) {
-        
-        console.log(value.timeBlock);
-        console.log(value.textBlock);
-        console.log(schedulerTimeText);
         if(schedulerTimeText === value.timeBlock) {
             eventEl.find("p").text(value.textBlock);
         }
     });
-
-
 
 })
 
@@ -129,6 +106,3 @@ $(".container").on("click", "i", function(){
 var saveTasks = function() {  
     localStorage.setItem("events", JSON.stringify(events));
 };
-
-// load events for the first time
-//loadEvents();
