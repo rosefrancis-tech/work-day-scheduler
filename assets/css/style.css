@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-.clear {
+.utility {
   text-align: center;
   position: sticky;
   bottom:0; 
@@ -18,11 +18,12 @@ body {
   background-color: crimson;
   color: white;
   padding: 0;
-  width: 5%;
+  width: 3%;
   margin:auto;
-  opacity: 0.5;
+  opacity: 0.75;
   
 }
+
 textarea{
   background: transparent;
   border: none;
