@@ -31,18 +31,15 @@ $(".row").find($(".hour")).each(function() {
 })
 
 // edit events
-$(".description").on("click", function() {
-    //debugger;
+$(".description").on("click","p", function() {
+    
     // get current text 
     var texts = $(this)
     .text()
     .trim();
-    // get current class
-    var curClass = $(this)
-    .attr("class");
 
     // replace column element with a new textarea
-    var textInput = $("<textarea>").addClass(curClass).val(texts);
+    var textInput = $("<textarea>").addClass("text-block").val(texts);
     $(this).replaceWith(textInput);
 
     // auto focus new element
@@ -50,25 +47,39 @@ $(".description").on("click", function() {
 })
 
 // return to div from text area
-$(".description").on("blur", function() {
+$(".description").on("blur","textarea", function() {
     //debugger;
     // get current text 
-    var texts = $("<textarea>").val();
-    // get current class
-    var curClass = $("<textarea>")
-    .attr("class");
-    
+    var texts = $(this).val();
+     
     // recreate the div element
-    var textDisplay = $("<p>").addClass(curClass).text(texts);
-    $("<textarea>").replaceWith(textDisplay);
+    var textDisplay = $("<p>").addClass("text-block").text(texts);
+    $(this).replaceWith(textDisplay);
 
     // update events in local storage
+    
 
 })
+var events = {};
+
+var loadevents = function() {
+
+    tasks = JSON.parse(localStorage.getItem("events"));
+    // if nothing in localStorage, create a new object to track all task status arrays
+    if (!events) {
+      events = {events:[]};
+    }
+};
+
+var saveTasks = function() {
+
+   // save to local storage
+    localStorage.setItem("events", JSON.stringify(events));
+};
 
 $(".container").on("click", "i", function(){
     
-    editedText = $(".description").value;
+    editedText = $(".description").text;
     console.log(editedText);
     // add events in an array
 

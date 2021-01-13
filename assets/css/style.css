@@ -23,7 +23,13 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  margin-bottom: 0;
+  
 }
+
+
+
+
 
 .time-block{
   text-align: center;
@@ -45,16 +51,19 @@ textarea{
 .past {
   background-color: #d3d3d3;
   color: black;
+  
 }
 
 .present {
   background-color: #ff6961;
   color: black;
+  
 }
 
 .future {
   background-color: #77dd77;
   color: black;
+  
 }
 
 .saveBtn {
@@ -72,8 +81,16 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
+.text-block {
+  width: 100%;
+  height: 60%;
+  background-color: chartreuse;
+}
+
 .icon {
   margin: auto;
   padding: auto;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
+
+
