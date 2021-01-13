@@ -4,6 +4,25 @@ body {
   line-height: 1;
 }
 
+.clear {
+  text-align: center;
+  position: sticky;
+  bottom:0; 
+  width:100%;
+  background-color: white;;
+}
+
+.clear-all {
+  font-size: large;
+  border-style: double;
+  background-color: crimson;
+  color: white;
+  padding: 0;
+  width: 5%;
+  margin:auto;
+  opacity: 0.5;
+  
+}
 textarea{
   background: transparent;
   border: none;
