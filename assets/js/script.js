@@ -1,8 +1,6 @@
-// Current Time
+// Global variables
 var currentTime = moment();
 var hourOfTheDay = currentTime.format("ha");
-
-
 var events = [];
 var currentEvents = [];
 var eventObj = {};
