@@ -2,14 +2,34 @@
 var currentTime = moment();
 var hourOfTheDay = currentTime.format("ha");
 
-var editedText = "";
+
 var events = [];
+var currentEvents = [];
 var eventObj = {};
+
 
 // display today's date in header
 $(".currentDay").text(currentTime.format("dddd, MMMM Do"));
 
-var index = 0;
+var loadEvents = function() {
+    currentEvents = JSON.parse(localStorage.getItem("events"));
+    
+    // if nothing in localStorage, create a new object to track all task status arrays
+    /*
+    if (currentEvents != null ) {
+        for(var j=0; j < currentEvents.length; j++){
+            // if local storage has values for same timeblock, then remove it
+            if(currentEvents[j].timeBlock === eventObj.timeBlock) {
+                currentEvents.splice(j,1);
+                var textDisplay = $("<p>").text(texts);
+                //$(this).replaceWith(textDisplay);
+        }
+        
+    }
+    */
+};
+
+var index1 = 0;
 // style time-blocks according to the present, past and future times
 $(".row").find($(".hour")).each(function() {
     // time displayed in html
@@ -17,9 +37,9 @@ $(".row").find($(".hour")).each(function() {
     // convert the scheduler time from string to moment
     var schedulerTime = moment(schedulerTimeText,'ha');
     // select the row for applying styles
-    var eventEl = $(".row").find($(".description")).eq(index);
+    var eventEl = $(".row").find($(".description")).eq(index1);
 
-    index++;
+    index1++;
     // conditions for comparing current time and scheduler time
     if(moment().isAfter(schedulerTime)) {
         eventEl.addClass("past");
@@ -28,8 +48,22 @@ $(".row").find($(".hour")).each(function() {
         eventEl.addClass("future");
     }
     if(hourOfTheDay === schedulerTimeText) {
-        eventEl.addClass("present");
+        eventEl.addClass("present").removeClass("past");
     }
+
+    currentEvents = JSON.parse(localStorage.getItem("events"));
+    $.each(currentEvents, function(index,value) {
+        
+        console.log(value.timeBlock);
+        console.log(value.textBlock);
+        console.log(schedulerTimeText);
+        if(schedulerTimeText === value.timeBlock) {
+            eventEl.find("p").text(value.textBlock);
+        }
+    });
+
+
+
 })
 
 // edit events
@@ -50,7 +84,7 @@ $(".description").on("click","p", function() {
 
 // unfocus and save if away from editing
 $(".description").on("blur","textarea", function() {
-    //debugger;
+    
     // get current text 
     var texts = $(this).val();
     var currentTimeBlock = $(this)
@@ -60,46 +94,41 @@ $(".description").on("blur","textarea", function() {
                             .text()
                             .trim()
                             .toLowerCase();
-    
-    console.log(currentTimeBlock);
-
     // add current edited event and corresponding time-block as object
     eventObj = {
         timeBlock: currentTimeBlock,
         textBlock: texts
-    }
-
-    
-
-    console.log(eventObj);
-     
-    // recreate the div element
+    } 
+    // recreate the p element
     var textDisplay = $("<p>").addClass("text-block").text(texts);
     $(this).replaceWith(textDisplay);
-
-// save
-saveTasks();
-
 })
 
-
-var loadevents = function() {
-
-    tasks = JSON.parse(localStorage.getItem("events"));
-    // if nothing in localStorage, create a new object to track all task status arrays
-    if (!events) {
-      events.push(eventObj);
-    }
-};
-
-var saveTasks = function() {
-    events.push(eventObj);
-   // save to local storage
-    localStorage.setItem("events", JSON.stringify(events));
-};
-
+// save to local storage when save icon is clicked
 $(".container").on("click", "i", function(){
-    // 
+    currentEvents = JSON.parse(localStorage.getItem("events"));
+    
+    if(currentEvents != null) {
+        for(var j=0; j < currentEvents.length; j++){
+            // if local storage has values for same timeblock, then remove it
+            if(currentEvents[j].timeBlock === eventObj.timeBlock) {
+                currentEvents.splice(j,1);
+                break;
+            }
+        }
+        currentEvents.push(eventObj);
+        events = currentEvents;
+    }
+    else {
+        events.push(eventObj);     
+    }
     saveTasks();
 })
 
+// function for saving to local storage
+var saveTasks = function() {  
+    localStorage.setItem("events", JSON.stringify(events));
+};
+
+// load events for the first time
+//loadEvents();
