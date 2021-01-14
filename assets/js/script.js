@@ -73,8 +73,6 @@ $(".row").on("click", "i", function(){
         .closest(".row")
         .find($(".text-block"))
         .text().trim();
-        console.log(currentTextBlock);
-        console.log(currentTimeBlock);
     // keep current edited event text and corresponding time-block as object
     eventObj = {
         timeBlock: currentTimeBlock,
