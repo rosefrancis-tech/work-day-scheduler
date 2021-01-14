@@ -75,6 +75,9 @@ textarea{
   background-color: #06AED5;
   color: white;
   text-align: center;
+  
+  
+  
 }
 .saveBtn i:hover {
   font-size: 30px;
@@ -82,9 +85,9 @@ textarea{
   transition: all .3s ease-in-out;
 }
 .icon {
-  margin: auto;
+  margin: 20% auto auto auto;
   padding: auto;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 /* Save icon style starts*/
 
