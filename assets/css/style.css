@@ -4,6 +4,23 @@ body {
   line-height: 1;
 }
 
+/* Header style starts*/
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+/* Header style ends*/
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+}
+
+/* Event text style starts*/
 textarea{
   background: transparent;
   border: none;
@@ -13,13 +30,15 @@ textarea{
   padding: 10px;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+.text-block {
+  width: 100%;
+  height: 70%;
 }
+
+.not-saved {
+  border-style: dotted;
+}
+/* Event text style ends*/
 
 .time-block{
   text-align: center;
@@ -31,20 +50,9 @@ textarea{
   margin-bottom: 0;
 }
 
-.text-block {
-  width: 100%;
-  height: 70%;
-}
 
-.not-saved {
-  border-style: dotted;
-}
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
+
 
 .hour {
   background-color: #ffffff;
@@ -85,8 +93,6 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-
-
 .icon {
   margin: auto;
   padding: auto;
@@ -110,5 +116,8 @@ textarea{
   width: 3%;
   margin:auto;
   opacity: 0.75;
+}
+footer {
+  text-align: right;
 }
 
