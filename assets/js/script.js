@@ -37,8 +37,7 @@ $(".row").find($(".hour")).each(function() {
             eventEl.find("p").text(value.textBlock);
         }
     });
-
-})
+});
 
 // Function for edit events on click
 $(".description").on("click","p", function() {
@@ -68,7 +67,12 @@ $(".description").on("blur","textarea", function() {
 $(".row").on("click", "i", function(){
     
     // get the values of current event text and corresponding time-block
-    var currentTimeBlock = $(this).closest(".row").find($(".time-block")).text().trim().toLowerCase();
+    var currentTimeBlock = $(this)
+        .closest(".row")
+        .find($(".time-block"))
+        .text()
+        .trim()
+        .toLowerCase();
     var currentTextBlock = $(this)
         .closest(".row")
         .find($(".text-block"))
@@ -101,7 +105,7 @@ $(".row").on("click", "i", function(){
 });
 
 // Function for clicking Trash icon
-$(".clear-all").on("click", function(){
+$(".clear-all").on("click", function() {
     localStorage.clear();
     location.reload();
 });
