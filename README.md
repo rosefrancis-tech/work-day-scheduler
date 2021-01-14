@@ -59,4 +59,6 @@ Deployed Application url:
 1. [Moment.js](https://momentjs.com/ "momentjs.com")
 2. [jQuery](https://jquery.com/ "jquery.com")
 3. [Fontawesome](https://fontawesome.com/icons?m=free "fontawesome.com")
+4. [Iconic](https://useiconic.com/open "useiconic.com")
+5. [w3schools.com](https://www.w3schools.com/ "w3schools.com")
 
