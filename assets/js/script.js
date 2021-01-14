@@ -134,5 +134,4 @@ $(".clear-all").on("click", function(){
 // function for saving to local storage
 var saveTasks = function() {  
     localStorage.setItem("events", JSON.stringify(events));
-    location.reload();
 };
