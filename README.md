@@ -8,7 +8,7 @@
 This website can be used to schedule your work day events.
 
 ## Introduction
-This website is a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This website is a simple calendar application that allows a user to save events for each hour of a work day from 9am in the morning to 5pm in the evening. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. Other tools used are moment.js, iconic and fontawesome.
 
 ## User Story
 <details>
@@ -41,19 +41,22 @@ This website is a simple calendar application that allows a user to save events 
 ## Mock-Up
 The following image shows the web application's appearance and functionality.
 
-Mock-up image: ![Mock-up image](/assets/images/mock-up.gif "Mock-up image")
+![Mock-up image](/assets/images/mock-up.gif "Mock-up image")
 
 ## Code Review
 
-The website is made using HTML, CSS, JavaScript, JQuery.
+Tools: HTML, CSS, JavaScript, JQuery, Moment.js, Iconic and Fontawesome.
     
 The completed project is uploaded in Github.  
-The repository link:  
+Repository link:  
 > [https://github.com/rosefrancis-tech/work-day-scheduler](https://github.com/rosefrancis-tech/work-day-scheduler)
 
 ## Live Project
-Deployed Application url: [https://rosefrancis-tech.github.io/work-day-scheduler/](https://rosefrancis-tech.github.io/work-day-scheduler/)
+Deployed Application url: 
+> [https://rosefrancis-tech.github.io/work-day-scheduler/](https://rosefrancis-tech.github.io/work-day-scheduler/)
 
 ## Acknowledgement
 1. [Moment.js](https://momentjs.com/ "momentjs.com")
+2. [jQuery](https://jquery.com/ "jquery.com")
+3. [Fontawesome](https://fontawesome.com/icons?m=free "fontawesome.com")
 
