@@ -16,7 +16,7 @@ body {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 /* Event text style starts*/
 .description{
@@ -115,3 +115,41 @@ footer {
   text-align: right;
 }
 /* Footer style ends*/
+
+/* Screen size style starts*/
+@media (max-width: 768px) {
+  
+  .hour {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .clear-all {
+    padding: 1rem;
+    width: 10%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .row {
+    margin:1%;
+  }
+  .time-block {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+     
+  .time-block {
+   font-size: 0.6rem;
+  }
+  .clear-all {
+    width: 15%;
+  }
+  .saveBtn {
+    padding-left: 1%;
+  }
+}
+/* Screen size style ends*/
