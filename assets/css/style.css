@@ -4,6 +4,12 @@ body {
   line-height: 1;
 }
 
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+}
+
 /* Header style starts*/
 .jumbotron {
   text-align: center;
@@ -14,13 +20,12 @@ body {
 }
 /* Header style ends*/
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
 
 /* Event text style starts*/
+.description{
+  white-space: pre-wrap;
+  margin-bottom: 0;
+}
 textarea{
   background: transparent;
   border: none;
@@ -29,55 +34,40 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
-
 .text-block {
   width: 100%;
   height: 70%;
 }
-
 .not-saved {
   border-style: dotted;
 }
 /* Event text style ends*/
 
+/* Time style starts*/
 .time-block{
   text-align: center;
   border-radius: 15px;
 }
-
-.description{
-  white-space: pre-wrap;
-  margin-bottom: 0;
-}
-
-
-
-
-
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
-
 .past {
   background-color: #d3d3d3;
   color: black;
-  
 }
-
 .present {
   background-color: #ff6961;
   color: black;
-  
 }
-
 .future {
   background-color: #77dd77;
   color: black;
-  
 }
+/* Time style ends*/
 
+/* Save icon style starts*/
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -86,19 +76,19 @@ textarea{
   color: white;
   text-align: center;
 }
-
 .saveBtn i:hover {
   font-size: 20px;
   color: #000000;
   transition: all .3s ease-in-out;
 }
-
 .icon {
   margin: auto;
   padding: auto;
   white-space: nowrap;
 }
+/* Save icon style starts*/
 
+/* Delete icon style starts*/
 .utility {
   text-align: center;
   position: sticky;
@@ -106,7 +96,6 @@ textarea{
   width:100%;
   background-color: white;;
 }
-
 .clear-all {
   font-size: large;
   border-style: double;
@@ -117,7 +106,10 @@ textarea{
   margin:auto;
   opacity: 0.75;
 }
+/* Delete icon style starts*/
+
+/* Footer style starts*/
 footer {
   text-align: right;
 }
-
+/* Footer style ends*/
